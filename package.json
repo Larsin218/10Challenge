@@ -8,5 +8,15 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "dependencies": {
+    "inquirer": "^9.2.21"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
