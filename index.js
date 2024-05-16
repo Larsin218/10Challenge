@@ -29,29 +29,30 @@ const questions = [
 ];
 
 const makeSVG = (shape, shapeColor, text, textColor) => {
-  const width = 300,
-    height = 200;
+  const width = 300, height = 200;
+    
+  let shapeSVG;
 
   switch (shape) {
     case "Circle":
-      shapeSVG = Circle;
+      shapeSVG = new Circle(shapeColor);
       break;
     case "Square":
-      shapeSVG = Square;
+      shapeSVG = new Square(shapeColor);
       break;
     case "Triangle":
-      shapeSVG = Triangle;
+      shapeSVG = new Triangle(shapeColor);
       break;
   }
 
   return `<svg version="1.1" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-  ${shapeSVG}
+  ${shapeSVG.render()}
   <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
   </svg>`;
 };
 
 const saveSVGFile = (SVGLogo) => {
-  fs.writeFileSync('logo.svg', SVGLogo);
+  fs.writeFileSync('./examples/logo.svg', SVGLogo);
   console.log('Generated logo.svg');
 };
 

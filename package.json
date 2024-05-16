@@ -13,10 +13,10 @@
     "example": "examples",
     "lib": "lib"
   },
-  "dependencies": {
-    "inquirer": "^9.2.21"
-  },
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
   }
 }
