@@ -61,3 +61,5 @@ inquirer.prompt(questions).then(answers => {
   const SVGLogo = makeSVG(shape, shapeColor, text, textColor);
   saveSVGFile(SVGLogo);
 })
+
+module.exports = { makeSVG, questions }
